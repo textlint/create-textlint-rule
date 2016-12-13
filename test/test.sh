@@ -8,4 +8,4 @@ declare testRuleName="test-rule-name";
 # test
 cd ${currentDir}
 yes "" | node ${parentDir}/bin/cmd.js "${testRuleName}"
-$(npm bin)/rimraf "${currentDir}/textlint-rule-${testRuleName}"
+rm -rf "${currentDir}/textlint-rule-${testRuleName}"

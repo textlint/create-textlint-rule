@@ -27,5 +27,12 @@ const cli = meow(`
 if (cli.input.length === 0 || cli.flags.help) {
     cli.showHelp();
 } else {
-    cliHandler(cli.input[0], cli.flags);
+    cliHandler(cli.input[0], cli.flags).then(() => {
+        process.exit(0);
+    }).catch(error => {
+        console.log(chalk.red(`✗ Error: ${error.message}`));
+        console.log();
+        console.error(error);
+        process.exit(1);
+    });
 }
