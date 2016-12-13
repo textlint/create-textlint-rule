@@ -13,6 +13,20 @@ Install with [npm](https://www.npmjs.com/):
 
 ## Usage
 
+Usage of `create-textlint-rule` command.
+
+    $ create-textlint-rule --help
+    Usage
+      $ create-textlint-rule rule-name
+
+    Options
+      --help  Show help
+      --yarn  Use yarn for installing
+      --yes   Pass --yes all for initializing process
+
+    Examples
+      $ create-textlint-rule awesome-rule
+
 Create textlint rule project by following command:
 
 ```sh
