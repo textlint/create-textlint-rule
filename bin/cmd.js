@@ -10,6 +10,7 @@ const cli = meow(`
     Options
       --help  Show help
       --yarn  Use yarn for installing
+      --yes   Pass --yes all for install process
 
     Examples
       $ create-textlint-rule awesome-rule

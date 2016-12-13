@@ -4,8 +4,7 @@ declare currentDir=$(cd $(dirname $0);pwd)
 declare dirName=$(basename "${currentDir}")
 declare parentDir=$(dirname "${currentDir}")
 declare testRuleName="test-rule-name";
-
 # test
 cd ${currentDir}
-yes "" | head -10 | node ${parentDir}/bin/cmd.js "${testRuleName}"
+node ${parentDir}/bin/cmd.js "${testRuleName}" --yes
 rm -rf "${currentDir}/textlint-rule-${testRuleName}"
