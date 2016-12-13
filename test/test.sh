@@ -7,5 +7,5 @@ declare testRuleName="test-rule-name";
 
 # test
 cd ${currentDir}
-yes "" | node ${parentDir}/bin/cmd.js "${testRuleName}"
+yes "" | head -10 | node ${parentDir}/bin/cmd.js "${testRuleName}"
 rm -rf "${currentDir}/textlint-rule-${testRuleName}"

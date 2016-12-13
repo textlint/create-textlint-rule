@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 'use strict';
 const meow = require('meow');
+const chalk = require('chalk');
 const cliHandler = require('../lib/cli-handler');
 const cli = meow(`
     Usage

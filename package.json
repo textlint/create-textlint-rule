@@ -16,7 +16,7 @@
     "create-textlint-rule": "bin/cmd.js"
   },
   "scripts": {
-    "test": "bash test/test.sh"
+    "test": "./test/test.sh"
   },
   "keywords": [
     "textlint",
