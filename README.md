@@ -17,7 +17,7 @@ Create textlint rule project by following command:
 
 ```sh
 $ create-textlint-rule no-todo
-$ `textlint-rule-no-todo` project is created in current dir
+#`textlint-rule-no-todo` project is created in current dir
 ```
 
 You can start to develop textlint rule.
