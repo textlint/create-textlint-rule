@@ -1,4 +1,4 @@
-# create-textlint-rule
+# create-textlint-rule [![Build Status](https://travis-ci.org/textlint/create-textlint-rule.svg?branch=master)](https://travis-ci.org/textlint/create-textlint-rule)
 
 Create textlint rule with no configuration.
 
