@@ -2,6 +2,8 @@
 'use strict';
 const meow = require('meow');
 const chalk = require('chalk');
+const updateNotifier = require('update-notifier');
+const pkg = require('../package.json');
 const cliHandler = require('../lib/cli-handler');
 const cli = meow(`
     Usage
@@ -26,6 +28,11 @@ const cli = meow(`
  ...
  }
  */
+updateNotifier({
+    pkg: pkg,
+    updateCheckInterval: 1000 * 60 * 60 * 24 * 7
+}).notify();
+
 if (cli.input.length === 0 || cli.flags.help) {
     cli.showHelp();
 } else {
