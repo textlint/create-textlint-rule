@@ -1,5 +1,7 @@
 # create-textlint-rule [![Build Status](https://travis-ci.org/textlint/create-textlint-rule.svg?branch=master)](https://travis-ci.org/textlint/create-textlint-rule)
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/textlint/create-textlint-rule.svg)](https://greenkeeper.io/)
+
 Create textlint rule with no configuration.
 
 This command line tools generate textlint rule project files by one command.
