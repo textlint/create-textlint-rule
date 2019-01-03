@@ -10,6 +10,8 @@ This command line tools generate textlint rule project files by one command.
 Install with [npm](https://www.npmjs.com/):
 
     npm install create-textlint-rule -g
+    # Or
+    npx create-textlint-rule
 
 ## Usage
 
@@ -25,7 +27,10 @@ Usage of `create-textlint-rule` command.
       --yes   Pass --yes all for initializing process
 
     Examples
-      $ create-textlint-rule awesome-rule
+      # create textlint-rule-example directory and install
+      $ create-textlint-rule example
+      # install to current directory
+      $ create-textlint-rule .
 
 Create textlint rule project by following command:
 
