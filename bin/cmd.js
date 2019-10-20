@@ -13,6 +13,7 @@ const cli = meow(
     Options
       --help  Show help
       --yarn  Use yarn for installing
+      --typescript  Create TypeScript project
       --yes   Pass --yes all for initializing process
 
     Examples
@@ -20,6 +21,8 @@ const cli = meow(
       $ create-textlint-rule example
       # install to current directory
       $ create-textlint-rule .
+      # create textlint-rule-example directory is based on TypeScript 
+      $ create-textlint-rule example --typescript
 `,
     {
         alias: {
@@ -45,6 +48,7 @@ if (cli.input.length === 0 || cli.flags.help) {
     cliHandler(cli.input[0], {
         yes: cli.flags.yes,
         yarn: cli.flags.yarn,
+        typescript: cli.flags.typescript,
         cwd: process.cwd()
     })
         .then(() => {

@@ -4,7 +4,6 @@ Create textlint rule with no configuration.
 
 This command line tools generate textlint rule project files by one command.
 
-
 ## Install
 
 Install with [npm](https://www.npmjs.com/):
@@ -17,13 +16,13 @@ Install with [npm](https://www.npmjs.com/):
 
 Usage of `create-textlint-rule` command.
 
-    $ create-textlint-rule --help
     Usage
       $ create-textlint-rule rule-name
 
     Options
       --help  Show help
       --yarn  Use yarn for installing
+      --typescript  Create TypeScript project
       --yes   Pass --yes all for initializing process
 
     Examples
@@ -31,7 +30,9 @@ Usage of `create-textlint-rule` command.
       $ create-textlint-rule example
       # install to current directory
       $ create-textlint-rule .
-
+      # create textlint-rule-example directory is based on TypeScript 
+      $ create-textlint-rule example --typescript
+  
 Create textlint rule project by following command:
 
 ```sh
@@ -40,7 +41,8 @@ $ create-textlint-rule no-todo
 ```
 
 You can start to develop textlint rule.
-(See [textlint-scripts](https://github.com/textlint/textlint-scripts "textlint-scripts") for more details.)
+
+For more details, see [textlint-scripts](https://github.com/textlint/textlint-scripts "textlint-scripts").
 
 ### Build
 
@@ -76,6 +78,9 @@ You can learn to create textlint rule.
 This Command line tools based on these project.
 
 - [textlint/textlint-rule-template: This is TEMPLATE REPOSITORY for creating textlint rule.](https://github.com/textlint/textlint-rule-template)
+    - JavaScript Template
+- [https://github.com/textlint/textlint-rule-template-ts#textlint-rule-template](https://github.com/textlint/textlint-rule-template-ts#textlint-rule-template)
+    - TypeScript Template
 - [textlint/textlint-scripts: textlint npm-run-scripts CLI help to create textlint rule.](https://github.com/textlint/textlint-scripts)
 - [facebookincubator/create-react-app: Create React apps with no build configuration.](https://github.com/facebookincubator/create-react-app "facebookincubator/create-react-app: Create React apps with no build configuration.")
 
