@@ -9,7 +9,7 @@
     "lib/"
   ],
   "name": "create-textlint-rule",
-  "version": "1.4.0",
+  "version": "1.5.0",
   "description": "Create textlint rule project with no configuration.",
   "main": "lib/create-textlint-rule.js",
   "bin": {
