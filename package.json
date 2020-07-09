@@ -34,17 +34,17 @@
   },
   "homepage": "https://github.com/textlint/create-textlint-rule",
   "dependencies": {
-    "chalk": "^2.4.2",
+    "chalk": "^4.1.0",
     "cross-spawn": "^7.0.3",
     "cross-spawn-promise": "^0.10.2",
-    "meow": "^5.0.0",
+    "meow": "^7.0.1",
     "rimraf": "^3.0.2",
-    "update-notifier": "^3.0.1"
+    "update-notifier": "^4.1.0"
   },
   "devDependencies": {
-    "husky": "^3.1.0",
-    "lint-staged": "^9.5.0",
-    "prettier": "^1.15.3"
+    "husky": "^4.2.5",
+    "lint-staged": "^10.2.11",
+    "prettier": "^2.0.5"
   },
   "prettier": {
     "singleQuote": false,
