@@ -35,10 +35,10 @@
   "homepage": "https://github.com/textlint/create-textlint-rule",
   "dependencies": {
     "chalk": "^2.4.2",
-    "cross-spawn": "^7.0.1",
-    "cross-spawn-promise": "^0.10.1",
+    "cross-spawn": "^7.0.3",
+    "cross-spawn-promise": "^0.10.2",
     "meow": "^5.0.0",
-    "rimraf": "^3.0.0",
+    "rimraf": "^3.0.2",
     "update-notifier": "^3.0.1"
   },
   "devDependencies": {
