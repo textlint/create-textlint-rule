@@ -39,7 +39,7 @@
     "cross-spawn-promise": "^0.10.2",
     "meow": "^7.1.0",
     "rimraf": "^3.0.2",
-    "update-notifier": "^4.1.0"
+    "update-notifier": "^4.1.1"
   },
   "devDependencies": {
     "husky": "^4.2.5",
