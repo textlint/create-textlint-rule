@@ -34,7 +34,7 @@
   },
   "homepage": "https://github.com/textlint/create-textlint-rule",
   "dependencies": {
-    "chalk": "^4.1.2",
+    "chalk": "^5.0.0",
     "cross-spawn": "^7.0.3",
     "cross-spawn-promise": "^0.10.2",
     "meow": "^7.1.1",
