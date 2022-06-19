@@ -54,7 +54,7 @@ if (cli.input.length === 0 || cli.flags.help) {
         .then(() => {
             process.exit(0);
         })
-        .catch(error => {
+        .catch((error) => {
             console.log(chalk.red(`✗ Error: ${error.message}`));
             console.log();
             console.error(error);
