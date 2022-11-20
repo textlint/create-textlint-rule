@@ -8,7 +8,7 @@ This command line tools generate textlint rule project files by one command.
 
 Install with [npm](https://www.npmjs.com/):
 
-    npm install create-textlint-rule -g
+    npm install --global create-textlint-rule
     # Or
     npx create-textlint-rule
 

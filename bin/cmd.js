@@ -1,10 +1,13 @@
 #!/usr/bin/env node
-"use strict";
-const meow = require("meow");
-const chalk = require("chalk");
-const updateNotifier = require("update-notifier");
-const pkg = require("../package.json");
-const cliHandler = require("../lib/cli-handler");
+import meow from "meow";
+import chalk from "chalk";
+import updateNotifier from "update-notifier";
+import cliHandler from "../lib/cli-handler.js";
+import { readFile } from "node:fs/promises";
+export const getPackageInfo = async () => {
+    const pkg = await readFile(new URL("../package.json", import.meta.url));
+    return JSON.parse(pkg);
+};
 const cli = meow(
     `
     Usage
@@ -25,9 +28,9 @@ const cli = meow(
       $ create-textlint-rule example --typescript
 `,
     {
-        alias: {
-            h: "help"
-        }
+        importMeta: import.meta,
+        autoHelp: true,
+        autoVersion: true
     }
 );
 /*
@@ -38,7 +41,7 @@ const cli = meow(
  }
  */
 updateNotifier({
-    pkg: pkg,
+    pkg: await getPackageInfo(),
     updateCheckInterval: 1000 * 60 * 60 * 24 * 7
 }).notify();
 
