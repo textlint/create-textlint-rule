@@ -1,6 +1,6 @@
 {
   "name": "create-textlint-rule",
-  "version": "1.5.0",
+  "version": "2.0.0",
   "description": "Create textlint rule project with no configuration.",
   "keywords": [
     "textlint",
