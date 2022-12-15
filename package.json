@@ -50,7 +50,7 @@
     "trailingComma": "none"
   },
   "dependencies": {
-    "chalk": "^5.1.2",
+    "chalk": "^5.2.0",
     "cross-spawn": "^7.0.3",
     "cross-spawn-promise": "^0.10.2",
     "meow": "^11.0.0",
