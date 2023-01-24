@@ -54,7 +54,7 @@
     "cross-spawn": "^7.0.3",
     "cross-spawn-promise": "^0.10.2",
     "meow": "^11.0.0",
-    "rimraf": "^3.0.2",
+    "rimraf": "^4.1.2",
     "update-notifier": "^6.0.2"
   },
   "devDependencies": {
