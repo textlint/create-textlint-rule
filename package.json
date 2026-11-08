@@ -49,13 +49,9 @@
     "tabWidth": 4,
     "trailingComma": "none"
   },
-  "dependencies": {
-    "chalk": "^6.0.1",
-    "cross-spawn": "^7.0.6"
-  },
+  "packageManager": "pnpm@12.18.0",
   "devDependencies": {
     "lint-staged": "^17.6.0",
     "prettier": "^3.9.10"
-  },
-  "packageManager": "pnpm@12.18.0"
+  }
 }

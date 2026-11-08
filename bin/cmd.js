@@ -1,7 +1,6 @@
 #!/usr/bin/env node
-import { parseArgs } from "node:util";
+import { parseArgs, styleText } from "node:util";
 import { readFile } from "node:fs/promises";
-import chalk from "chalk";
 import cliHandler from "../lib/cli-handler.js";
 
 const HELP_TEXT = `
@@ -42,7 +41,7 @@ try {
         }
     });
 } catch (error) {
-    console.error(chalk.red(`✗ Error: ${error.message}`));
+    console.error(styleText("red", `✗ Error: ${error.message}`));
     console.log(HELP_TEXT);
     process.exit(1);
 }
@@ -64,7 +63,7 @@ if (flags.version) {
             process.exit(0);
         })
         .catch((error) => {
-            console.log(chalk.red(`✗ Error: ${error.message}`));
+            console.log(styleText("red", `✗ Error: ${error.message}`));
             console.log();
             console.error(error);
             process.exit(1);
