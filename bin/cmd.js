@@ -1,20 +1,16 @@
 #!/usr/bin/env node
-import meow from "meow";
-import chalk from "chalk";
-import updateNotifier from "update-notifier";
-import cliHandler from "../lib/cli-handler.js";
+import { parseArgs } from "node:util";
 import { readFile } from "node:fs/promises";
-export const getPackageInfo = async () => {
-    const pkg = await readFile(new URL("../package.json", import.meta.url));
-    return JSON.parse(pkg);
-};
-const cli = meow(
-    `
+import chalk from "chalk";
+import cliHandler from "../lib/cli-handler.js";
+
+const HELP_TEXT = `
     Usage
       $ create-textlint-rule rule-name
 
     Options
       --help  Show help
+      --version  Show version
       --yarn  Use yarn for installing
       --typescript  Create TypeScript project
       --yes   Pass --yes all for initializing process
@@ -24,34 +20,44 @@ const cli = meow(
       $ create-textlint-rule example
       # install to current directory
       $ create-textlint-rule .
-      # create textlint-rule-example directory is based on TypeScript 
+      # create textlint-rule-example directory is based on TypeScript
       $ create-textlint-rule example --typescript
-`,
-    {
-        importMeta: import.meta,
-        autoHelp: true,
-        autoVersion: true
-    }
-);
-/*
- {
- input: ['unicorns'],
- flags: {rainbow: true},
- ...
- }
- */
-updateNotifier({
-    pkg: await getPackageInfo(),
-    updateCheckInterval: 1000 * 60 * 60 * 24 * 7
-}).notify();
+`;
 
-if (cli.input.length === 0 || cli.flags.help) {
-    cli.showHelp();
+const getPackageInfo = async () => {
+    const pkg = await readFile(new URL("../package.json", import.meta.url), "utf-8");
+    return JSON.parse(pkg);
+};
+
+let cli;
+try {
+    cli = parseArgs({
+        allowPositionals: true,
+        options: {
+            help: { type: "boolean", short: "h" },
+            version: { type: "boolean", short: "v" },
+            yarn: { type: "boolean" },
+            typescript: { type: "boolean" },
+            yes: { type: "boolean" }
+        }
+    });
+} catch (error) {
+    console.error(chalk.red(`✗ Error: ${error.message}`));
+    console.log(HELP_TEXT);
+    process.exit(1);
+}
+
+const { values: flags, positionals: input } = cli;
+if (flags.version) {
+    const pkg = await getPackageInfo();
+    console.log(pkg.version);
+} else if (input.length === 0 || flags.help) {
+    console.log(HELP_TEXT);
 } else {
-    cliHandler(cli.input[0], {
-        yes: cli.flags.yes,
-        yarn: cli.flags.yarn,
-        typescript: cli.flags.typescript,
+    cliHandler(input[0], {
+        yes: flags.yes,
+        yarn: flags.yarn,
+        typescript: flags.typescript,
         cwd: process.cwd()
     })
         .then(() => {
