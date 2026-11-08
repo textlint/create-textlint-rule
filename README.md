@@ -1,4 +1,4 @@
-# create-textlint-rule [![Build Status](https://travis-ci.org/textlint/create-textlint-rule.svg?branch=master)](https://travis-ci.org/textlint/create-textlint-rule)
+# create-textlint-rule [![test](https://github.com/textlint/create-textlint-rule/actions/workflows/test.yml/badge.svg)](https://github.com/textlint/create-textlint-rule/actions/workflows/test.yml)
 
 Create textlint rule with no configuration.
 
@@ -21,6 +21,7 @@ Usage of `create-textlint-rule` command.
 
     Options
       --help  Show help
+      --version  Show version
       --yarn  Use yarn for installing
       --typescript  Create TypeScript project
       --yes   Pass --yes all for initializing process
@@ -30,7 +31,7 @@ Usage of `create-textlint-rule` command.
       $ create-textlint-rule example
       # install to current directory
       $ create-textlint-rule .
-      # create textlint-rule-example directory is based on TypeScript 
+      # create textlint-rule-example directory is based on TypeScript
       $ create-textlint-rule example --typescript
   
 Create textlint rule project by following command:
@@ -90,9 +91,9 @@ See [Releases page](https://github.com/textlint/create-textlint-rule/releases).
 
 ## Running tests
 
-Install devDependencies and Run `npm test`:
+This project uses [pnpm](https://pnpm.io/). Install devDependencies and run `pnpm test`:
 
-    npm i -d && npm test
+    pnpm install && pnpm test
 
 ## Contributing
 
