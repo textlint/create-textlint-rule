@@ -36,7 +36,7 @@
   "scripts": {
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,css}\"",
     "prepare": "git config --local core.hooksPath .githooks",
-    "test": "./test/test.sh"
+    "test": "bash ./test/test.sh"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx,css}": [
