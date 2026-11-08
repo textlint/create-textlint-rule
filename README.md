@@ -95,6 +95,15 @@ This project uses [pnpm](https://pnpm.io/). Install devDependencies and run `pnp
 
     pnpm install && pnpm test
 
+## Release
+
+Releases are published to npm via [Trusted Publishing](https://docs.npmjs.com/trusted-publishers) (OIDC).
+
+1. Run the [Create Release PR](https://github.com/textlint/create-textlint-rule/actions/workflows/create-release-pr.yml) workflow and choose `patch`, `minor`, or `major`
+2. Review and merge the created release PR (labeled `Type: Release`)
+3. The [Release](https://github.com/textlint/create-textlint-rule/actions/workflows/release.yml) workflow stages the package on npm and creates a GitHub Release
+4. Approve the staged package on npm with 2FA to publish it
+
 ## Contributing
 
 Pull requests and stars are always welcome.
