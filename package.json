@@ -49,7 +49,7 @@
     "tabWidth": 4,
     "trailingComma": "none"
   },
-  "packageManager": "pnpm@12.18.0",
+  "packageManager": "pnpm@12.20.0",
   "devDependencies": {
     "lint-staged": "^17.6.0",
     "prettier": "^3.9.10"
